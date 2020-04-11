@@ -16,15 +16,17 @@ const AllQuestions = () => {
   console.log('questions >>>', questions);
 
   return (
-    <div>
-      <h2>Questions</h2>
+    <div className="question">
+      <header className="question_header">
+        <h2>Questions</h2>
+      </header>
       <div>
         {questions.map(question =>
-          <div key={question.id}>
-            <div>
+          <div className="question_item" key={question.id}>
+            <div className="question_item-body">
               {question.body} {question.id}
             </div>
-            <div>
+            <div className="question_item-instructions">
               {question.instructions}
             </div>
           </div>)}

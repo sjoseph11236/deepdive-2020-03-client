@@ -17,13 +17,16 @@ const CreateQuestion = () => {
   }
 
   return (
-    <div>
-      <h2>Create A New Question</h2>
-      <form>
+    <div className= "question-create">
+      <div className="question_create_header">
+        <h2>Create A New Question</h2>
+      </div>
+      <form className="question-create_input-body">
         <label>
           Please enter a question:
         </label>
         <input
+          className="question-create_input-body"
           type="text"
           value={body}
           onChange={evt => setBody(evt.target.value)}
@@ -32,11 +35,13 @@ const CreateQuestion = () => {
           Please enter additional instructions:
         </label>
         <input
+          className="question-create_input-instructions"
           type="text"
           value={instructions}
           onChange={evt => setInstructions(evt.target.value)}
         />
         <input
+          className="question-create_input-submit"
           type="submit"
           value="Add My Question"
           onClick={handleSubmit}
