@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import AllQuestions from "./components/questions/AllQuestions";
 import CreateQuestion from "./components/questions/CreateQuestion";
+import CreateOption from "./components/options/CreateOption";
 
 export default function App() {
   return (
@@ -34,6 +35,9 @@ export default function App() {
         <Switch>
           <Route path="/about">
             <About />
+          </Route>
+          <Route exact path="/options/create">
+            <CreateOption />
           </Route>
           <Route exact path="/questions/create">
             <CreateQuestion />
